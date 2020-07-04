@@ -1,5 +1,15 @@
 /*
 
 */
-var feeds = document.getElementsByClassName("pedkr2u6 tn0ko95a pnx7fd3z").getElementsByTagName("div");
-var existing_feeds = feeds.length;
+var feeds = document.getElementsByClassName("pedkr2u6 tn0ko95a pnx7fd3z")[0].getElementsByTagName("div")[0].getElementsByTagName("div");
+
+var existing_feeds = 0;
+var i;
+
+for (i = 0; i< feeds.length; i++) 
+{
+  if (  feeds[i].dataset.pagelet == undefined ) { continue;}
+  else {existing_feeds ++;}
+}
+
+console.log(existing_feeds);
