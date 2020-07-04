@@ -2,8 +2,12 @@
 
 */
 
+function get_feeds() {
+  return document.getElementsByClassName("pedkr2u6 tn0ko95a pnx7fd3z")[0].getElementsByTagName("div")[0].getElementsByTagName("div")
+}
+
 function count_feeds() {
-  var feeds = document.getElementsByClassName("pedkr2u6 tn0ko95a pnx7fd3z")[0].getElementsByTagName("div")[0].getElementsByTagName("div");
+  var feeds = get_feeds();
   var existing_feeds = 0;
   var i;
   for (i = 0; i< feeds.length; i++) 
