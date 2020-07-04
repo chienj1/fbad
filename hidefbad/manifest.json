@@ -1,0 +1,19 @@
+{
+
+  "description": "hide embedded ads in the specific webside",
+  "manifest_version": 2,
+  "name": "hidefbad",
+  "version": "1.0",
+  "homepage_url": "https://github.com/chienj1/hidefbad/",
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/*"],
+      "js": ["hidefbad.js"]
+    }
+  ]
+
+}
