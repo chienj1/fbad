@@ -8,7 +8,7 @@ var i;
 
 for (i = 0; i< feeds.length; i++) 
 {
-  if (  feeds[i].dataset.pagelet == undefined ) { continue;}
+  if ( feeds[i].dataset.pagelet == undefined ) { continue;}
   else {existing_feeds ++;}
 }
 
