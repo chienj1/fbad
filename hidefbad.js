@@ -30,13 +30,11 @@ function count_feeds() {
 }
 */
 
-/*
-var timeoutID = window.setInterval( ()=>console.log(count_feeds()), 100);
-window.clearInterval(timeoutID)
-*/
-
 var mutationObserver = new MutationObserver(function(mutations) {
-  mutations.forEach(function(mutation) {  if (mutation.type == "childList" ) {console.log(mutation.target)};});}
+  mutations.forEach(function(mutation) {  if (mutation.type == "childList" & mutation.target.tagName == "DIV" ) 
+       {console.log(mutation.target.attributes)};
+    });
+  }
 );
 
 mutationObserver.observe(document.documentElement, {
