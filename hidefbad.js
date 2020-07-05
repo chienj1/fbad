@@ -31,8 +31,8 @@ function count_feeds() {
 */
 
 var mutationObserver = new MutationObserver(function(mutations) {
-  mutations.forEach(function(mutation) {  if (mutation.type == "childList" & mutation.target.tagName == "DIV" ) 
-       {console.log(mutation.target.attributes)};
+  mutations.forEach(function(mutation) {  if (mutation.type == "childList" & mutation.target.tagName == "DIV" & mutation.target.attributes.getNamedItem("role").nodeValue == "feed") 
+       {console.log(mutation.target)};
     });
   }
 );
